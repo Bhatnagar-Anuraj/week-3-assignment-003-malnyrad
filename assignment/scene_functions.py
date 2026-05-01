@@ -182,6 +182,7 @@ def place_in_circle(create_func, count=8, radius=10, center=(0, 0, 0),
 
         #   Append the returned name to a results list.
         results.append(created)
+        circle = cmds.group(results, name="circle")
 
     #   Return the results list.
-    return results
+    return results, circle

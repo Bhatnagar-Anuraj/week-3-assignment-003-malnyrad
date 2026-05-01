@@ -34,22 +34,19 @@ cmds.file(new=True, force=True)
 ground = cmds.polyPlane(name="ground", width=60, height=60,
                         subdivisionsX=1, subdivisionsY=1)[0]
 
-# ---------------------------------------------------------------------------
-# TODO: Build your scene below by calling functions from scene_functions.
-#
-# Example calls (uncomment and modify once your functions are implemented):
-#
-#   sf.create_building(width=5, height=10, depth=5, position=(-10, 0, 8))
-#   sf.create_tree(position=(3, 0, -5))
-#   sf.create_fence(length=12, post_count=7, position=(-6, 0, -3))
-#   sf.create_lamp_post(position=(8, 0, 2))
-#
-#   # Place 8 trees in a circle of radius 15:
-#   sf.place_in_circle(sf.create_tree, count=8, radius=15)
-#
-# Remember: call each function at least once, and aim for 15+ objects.
-# ---------------------------------------------------------------------------
+# Create objects.
+sf.create_building(width=5, height=10, depth=5, position=(-10, 0, 8))
+sf.create_building(width=5, height=10, depth=5, position=(-10, 0, -1))
+sf.create_tree(position=(3, 0, -5))
+sf.create_tree(position=(6, 0, 2))
+sf.create_tree(position=(-2, 0, 4))
+sf.create_fence(length=12, post_count=7, position=(-6, 0, -3))
+sf.create_lamp_post(position=(8, 0, 2))
 
+# Place 8 trees in a circle of radius 15:
+sf.place_in_circle(sf.create_tree, count=8, radius=15)
+
+# Remember: call each function at least once, and aim for 15+ objects.
 
 # ---------------------------------------------------------------------------
 # Final viewport framing (do not remove).
